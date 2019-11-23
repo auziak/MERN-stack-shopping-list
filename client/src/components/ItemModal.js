@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   Button,
   Modal,
@@ -8,15 +8,15 @@ import {
   FormGroup,
   Label,
   Input
-} from 'reactstrap';
-import { connect } from 'react-redux';
-import { addItem } from '../actions/itemActions';
-import PropTypes from 'prop-types';
+} from "reactstrap";
+import { connect } from "react-redux";
+import { addItem } from "../actions/itemActions";
+import PropTypes from "prop-types";
 
 class ItemModal extends Component {
   state = {
     modal: false,
-    name: ''
+    name: ""
   };
 
   static propTypes = {
@@ -51,7 +51,7 @@ class ItemModal extends Component {
         {this.props.isAuthenticated ? (
           <Button
             color="dark"
-            style={{ marginBottom: '2rem' }}
+            style={{ marginBottom: "2rem" }}
             onClick={this.toggle}
           >
             Add Item
@@ -73,7 +73,7 @@ class ItemModal extends Component {
                   placeholder="Add shopping item"
                   onChange={this.onChange}
                 />
-                <Button color="dark" style={{ marginTop: '2rem' }} block>
+                <Button color="dark" style={{ marginTop: "2rem" }} block>
                   Add Item
                 </Button>
               </FormGroup>
@@ -87,10 +87,7 @@ class ItemModal extends Component {
 
 const mapStateToProps = state => ({
   item: state.items,
-  isAuthenticated: state.auth.isAthenticated
+  isAuthenticated: state.auth.isAuthenticated
 });
 
-export default connect(
-  mapStateToProps,
-  { addItem }
-)(ItemModal);
+export default connect(mapStateToProps, { addItem })(ItemModal);

@@ -1,4 +1,4 @@
 {
-  "mongoURI": "PUT_YOUR_MONGO_URI_KEY",
+  "mongoURI": "mongodb+srv://auziak:917168@cluster0-4pgwq.mongodb.net/test?retryWrites=true&w=majority",
   "jwtSecret": "sl_myJwtSecret"
 }
